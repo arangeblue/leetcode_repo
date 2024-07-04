@@ -6,6 +6,6 @@
 
 select p.project_id, round(avg(e.experience_years),2) as average_years
 from Employee as e 
-    left join Project as p on e.employee_id = p.employee_id
+    join Project as p on e.employee_id = p.employee_id
 group by p.project_id
-having p.project_id is not null;
+-- having p.project_id is not null;
